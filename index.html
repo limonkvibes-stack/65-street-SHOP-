@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>65 Street Shop | Собрать образ</title>
+
+<style>
+
+:root {
+  --cream: #D8C7AA;
+  --cream-light: #E8DCC7;
+  --brown: #493229;
+  --brown-dark: #2A1C17;
+  --brown-deep: #19110F;
+  --black: #0E0D0C;
+  --white: #F8F4EC;
+  --gold: #B89555;
+  --gold-light: #D5B76F;
+  --muted: #AFA092;
+  --border: rgba(184,149,85,0.55);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--white);
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+
+  background:
+    linear-gradient(
+      135deg,
+      #D8C7AA 0%,
+      #B79D7C 30%,
+      #6A4A3A 65%,
+      #2A1C17 100%
+    );
+
+  background-attachment: fixed;
+}
+
+/* HEADER */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background: rgba(25,17,15,0.94);
+
+  backdrop-filter: blur(14px);
+
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  min-height: 70px;
+  padding: 15px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: var(--white);
+  font-size: 23px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.logo span {
+  color: var(--gold-light);
+}
+
+.back-link {
+  color: var(--white);
+  text-decoration: none;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  transition: 0.3s;
+}
+
+.back-link:hover {
+  color: var(--gold-light);
+}
+
+/* MAIN */
+
+.container {
+  width: min(1200px, 100%);
+  margin: auto;
+  padding: 65px 20px;
+}
+
+.title {
+  text-align: center;
+  color: var(--white);
+
+  font-size: clamp(30px, 5vw, 48px);
+  font-weight: 900;
+  letter-spacing: 5px;
+}
+
+.subtitle {
+  text-align: center;
+  color: var(--cream-light);
+
+  font-size: 15px;
+  line-height: 1.6;
+  margin-top: 12px;
+}
+
+.gold-line {
+  width: 70px;
+  height: 2px;
+
+  background: var(--gold);
+
+  margin: 25px auto 35px;
+}
+
+/* CATALOG */
+
+.look-box {
+  background: rgba(25,17,15,0.94);
+
+  border: 1px solid var(--border);
+  border-radius: 4px;
+
+  padding: 20px;
+
+  box-shadow:
+    0 25px 60px rgba(0,0,0,0.35);
+}
+
+/* 40 PHOTOS */
+
+.look-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 18px;
+}
+
+.look-item {
+  position: relative;
+  overflow: hidden;
+
+  background: var(--black);
+
+  border:
+    1px solid
+    rgba(184,149,85,0.45);
+
+  border-radius: 4px;
+
+  padding: 7px;
+
+  transition: 0.3s ease;
+}
+
+.look-item:hover {
+  transform: translateY(-5px);
+
+  border-color:
+    var(--gold-light);
+
+  box-shadow:
+    0 15px 35px
+    rgba(0,0,0,0.35);
+}
+
+.look-item img {
+  display: block;
+
+  width: 100%;
+  height: 360px;
+
+  object-fit: cover;
+
+  border-radius: 2px;
+
+  background: #30221D;
+
+  transition:
+    transform 0.4s ease;
+}
+
+.look-item:hover img {
+  transform: scale(1.025);
+}
+
+/* NUMBER */
+
+.look-number {
+  position: absolute;
+
+  top: 16px;
+  left: 16px;
+
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--white);
+
+  background:
+    rgba(25,17,15,0.9);
+
+  border:
+    1px solid var(--gold);
+
+  border-radius: 50%;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  z-index: 2;
+}
+
+/* CONTROLS */
+
+.controls {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 15px;
+
+  margin-top: 30px;
+}
+
+.control-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 52px;
+
+  padding: 15px 25px;
+
+  border: 1px solid var(--gold);
+  border-radius: 4px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #493229,
+      #241713
+    );
+
+  color: var(--white);
+
+  text-decoration: none;
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.control-button:hover {
+  color: var(--gold-light);
+
+  border-color:
+    var(--gold-light);
+
+  transform:
+    translateY(-3px);
+
+  box-shadow:
+    0 15px 30px
+    rgba(0,0,0,0.3);
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {.look-grid {
+    grid-template-columns:
+      repeat(3, 1fr);
+  }
+
+  .look-item img {
+    height: 330px;
+  }
+
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .nav-container {
+    min-height: auto;
+    padding: 15px;
+  }
+
+  .logo {
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+
+  .back-link {
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+  .container {
+    padding: 40px 12px;
+  }
+
+  .title {
+    font-size: 28px;
+    letter-spacing: 3px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+  }
+
+  .look-box {
+    padding: 10px;
+  }
+
+  .look-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    gap: 9px;
+  }
+
+  .look-item {
+    padding: 5px;
+  }
+
+  .look-item img {
+    height: 270px;
+  }
+
+  .look-number {
+    top: 12px;
+    left: 12px;
+
+    width: 28px;
+    height: 28px;
+  }
+
+  .controls {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .control-button {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 420px) {
+
+  .look-grid {
+    gap: 7px;
+  }
+
+  .look-item img {
+    height: 230px;
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+  <div class="nav-container">
+
+    <div class="logo">
+      65 street
+      <span>shop</span>
+    </div>
+
+    <a
+      href="index.html#catalog"
+      class="back-link"
+    >
+      ← Каталог
+    </a>
+
+  </div>
+
+</header>
+
+<main class="container">
+
+  <h1 class="title">
+    СОБРАТЬ ОБРАЗ
+  </h1>
+
+  <p class="subtitle">
+    Выбери свой вариант из нашего каталога
+  </p>
+
+  <div class="gold-line"></div>
+
+  <div class="look-box">
+
+    <div class="look-grid">
+
+      <div class="look-item">
+        <span class="look-number">01</span>
+        <img src="images/1.jpg" alt="65 Street товар 1" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">02</span>
+        <img src="images/2.jpg" alt="65 Street товар 2" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">03</span>
+        <img src="images/3.jpg" alt="65 Street товар 3" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">04</span>
+        <img src="images/4.jpg" alt="65 Street товар 4" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">05</span>
+        <img src="images/5.jpg" alt="65 Street товар 5" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">06</span>
+        <img src="images/6.jpg" alt="65 Street товар 6" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">07</span>
+        <img src="images/7.jpg" alt="65 Street товар 7" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">08</span>
+        <img src="images/8.jpg" alt="65 Street товар 8" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">09</span>
+        <img src="images/9.jpg" alt="65 Street товар 9" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">10</span>
+        <img src="images/10.jpg" alt="65 Street товар 10" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">11</span>
+        <img src="images/11.jpg" alt="65 Street товар 11" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">12</span>
+        <img src="images/12.jpg" alt="65 Street товар 12" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">13</span>
+        <img src="images/13.jpg" alt="65 Street товар 13" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">14</span>
+        <img src="images/14.jpg" alt="65 Street товар 14" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">15</span>
+        <img src="images/15.jpg" alt="65 Street товар 15" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">16</span>
+        <img src="images/16.jpg" alt="65 Street товар 16" loading="lazy">
+      </div><div class="look-item">
+        <span class="look-number">17</span>
+        <img src="images/17.jpg" alt="65 Street товар 17" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">18</span>
+        <img src="images/18.jpg" alt="65 Street товар 18" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">19</span>
+        <img src="images/19.jpg" alt="65 Street товар 19" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">20</span>
+        <img src="images/20.jpg" alt="65 Street товар 20" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">21</span>
+        <img src="images/21.jpg" alt="65 Street товар 21" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">22</span>
+        <img src="images/22.jpg" alt="65 Street товар 22" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">23</span>
+        <img src="images/23.jpg" alt="65 Street товар 23" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">24</span>
+        <img src="images/24.jpg" alt="65 Street товар 24" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">25</span>
+        <img src="images/25.jpg" alt="65 Street товар 25" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">26</span>
+        <img src="images/26.jpg" alt="65 Street товар 26" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">27</span>
+        <img src="images/27.jpg" alt="65 Street товар 27" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">28</span>
+        <img src="images/28.jpg" alt="65 Street товар 28" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">29</span>
+        <img src="images/29.jpg" alt="65 Street товар 29" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">30</span>
+        <img src="images/30.jpg" alt="65 Street товар 30" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">31</span>
+        <img src="images/31.jpg" alt="65 Street товар 31" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">32</span>
+        <img src="images/32.jpg" alt="65 Street товар 32" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">33</span>
+        <img src="images/33.jpg" alt="65 Street товар 33" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">34</span>
+        <img src="images/34.jpg" alt="65 Street товар 34" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">35</span>
+        <img src="images/35.jpg" alt="65 Street товар 35" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">36</span>
+        <img src="images/36.jpg" alt="65 Street товар 36" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">37</span>
+        <img src="images/37.jpg" alt="65 Street товар 37" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">38</span>
+        <img src="images/38.jpg" alt="65 Street товар 38" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">39</span>
+        <img src="images/39.jpg" alt="65 Street товар 39" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">40</span>
+        <img src="images/40.jpg" alt="65 Street товар 40" loading="lazy">
+      </div>
+
+    </div>
+
+    <div class="controls">
+
+      <a
+        href="index.html#catalog"
+        class="control-button"
+      >
+        ← К КАТАЛОГУ
+      </a>
+
+    </div>
+
+  </div>
+
+</main>
+
+</body>
+
+</html><div class="look-item">
+        <span class="look-number">17</span>
+        <img src="images/17.jpg" alt="65 Street товар 17" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">18</span>
+        <img src="images/18.jpg" alt="65 Street товар 18" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">19</span>
+        <img src="images/19.jpg" alt="65 Street товар 19" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">20</span>
+        <img src="images/20.jpg" alt="65 Street товар 20" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">21</span>
+        <img src="images/21.jpg" alt="65 Street товар 21" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">22</span>
+        <img src="images/22.jpg" alt="65 Street товар 22" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">23</span>
+        <img src="images/23.jpg" alt="65 Street товар 23" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">24</span>
+        <img src="images/24.jpg" alt="65 Street товар 24" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">25</span>
+        <img src="images/25.jpg" alt="65 Street товар 25" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">26</span>
+        <img src="images/26.jpg" alt="65 Street товар 26" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">27</span>
+        <img src="images/27.jpg" alt="65 Street товар 27" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">28</span>
+        <img src="images/28.jpg" alt="65 Street товар 28" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">29</span>
+        <img src="images/29.jpg" alt="65 Street товар 29" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">30</span>
+        <img src="images/30.jpg" alt="65 Street товар 30" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">31</span>
+        <img src="images/31.jpg" alt="65 Street товар 31" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">32</span>
+        <img src="images/32.jpg" alt="65 Street товар 32" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">33</span>
+        <img src="images/33.jpg" alt="65 Street товар 33" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">34</span>
+        <img src="images/34.jpg" alt="65 Street товар 34" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">35</span>
+        <img src="images/35.jpg" alt="65 Street товар 35" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">36</span>
+        <img src="images/36.jpg" alt="65 Street товар 36" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">37</span>
+        <img src="images/37.jpg" alt="65 Street товар 37" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">38</span>
+        <img src="images/38.jpg" alt="65 Street товар 38" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">39</span>
+        <img src="images/39.jpg" alt="65 Street товар 39" loading="lazy">
+      </div>
+
+      <div class="look-item">
+        <span class="look-number">40</span>
+        <img src="images/40.jpg" alt="65 Street товар 40" loading="lazy">
+      </div>
+
+    </div>
+
+    <div class="controls">
+
+      <a
+        href="index.html#catalog"
+        class="control-button"
+      >
+        ← К КАТАЛОГУ
+      </a>
+
+    </div>
+
+  </div>
+
+</main>
+
+</body>
+
+</html>
